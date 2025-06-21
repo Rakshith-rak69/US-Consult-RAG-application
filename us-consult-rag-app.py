@@ -45,10 +45,9 @@ client = OpenAI(
 )
 
 if "OPENROUTER_API_KEY" in st.secrets:
-    st.success("✅ OPENROUTER_API_KEY found in Streamlit secrets!")
-    st.write(f"Key preview: {st.secrets['OPENROUTER_API_KEY'][:5]}...")
+    st.success("✅ API_KEY found in Streamlit secrets!")
 else:
-    st.error("❌ OPENROUTER_API_KEY NOT found in Streamlit secrets! Please check your Streamlit Cloud secrets configuration.")
+    st.error("❌ API_KEY NOT found in Streamlit secrets! Please check your Streamlit Cloud secrets configuration.")
 
 
 system_prompt = ("You're a helpful assistant who looks answers up for a user in a textbook and returns the "
